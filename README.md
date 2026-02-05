@@ -33,7 +33,7 @@ Where:
 
 ---
 
-## 🎯 Key Innovations
+## Key Innovations
 
 ### 1. **Falsifiable Systems Hypothesis**
 Unlike purely descriptive models, this framework proposes specific, testable predictions:
@@ -86,7 +86,7 @@ neuro-coherence-framework/
 ├── CONTRIBUTING.md                    # Contribution guidelines
 ├── CITATION.cff                       # Citation format
 │
-├── docs/                              # 📖 Documentation
+├── docs/                              # Documentation
 │   ├── index.md
 │   ├── theoretical-framework/         # Theory & mathematical foundations
 │   │   ├── 01-introduction.md
@@ -112,7 +112,7 @@ neuro-coherence-framework/
 │       ├── bipolar-oscillations.md
 │       └── references.bib
 │
-├── simulations/                       # 🧮 Computational Models
+├── simulations/                       # Computational Models
 │   ├── README.md
 │   ├── requirements.txt
 │   ├── environment.yml
@@ -148,7 +148,7 @@ neuro-coherence-framework/
 │       ├── 04_BD_Dynamics.ipynb
 │       └── 05_Predictions.ipynb
 │
-├── analysis/                          # 📊 Data Analysis Tools
+├── analysis/                          # Data Analysis Tools
 │   ├── README.md
 │   ├── requirements.txt
 │   │
@@ -171,7 +171,7 @@ neuro-coherence-framework/
 │       ├── multimodal_fusion.py
 │       └── psi_calculation.py        # Calculate Ψ from data
 │
-├── visualization/                     # 📈 Visualization Tools
+├── visualization/                     # Visualization Tools
 │   ├── README.md
 │   ├── requirements.txt
 │   │
@@ -189,7 +189,7 @@ neuro-coherence-framework/
 │       ├── manuscript/
 │       └── presentations/
 │
-├── data/                              # 💾 Data Resources
+├── data/                              # Data Resources
 │   ├── README.md
 │   │
 │   ├── synthetic/                     # Generated datasets
@@ -205,7 +205,7 @@ neuro-coherence-framework/
 │       ├── eeg_montage.json
 │       └── brain_atlas.json
 │
-├── tools/                             # 🔧 Utility Tools
+├── tools/                             # Utility Tools
 │   ├── README.md
 │   │
 │   ├── biomarker_calculator/          # Calculate biomarkers
@@ -219,7 +219,7 @@ neuro-coherence-framework/
 │       ├── run_tests.py
 │       └── benchmark.py
 │
-├── papers/                            # 📄 Publications
+├── papers/                            # Publications
 │   ├── original/                      # Original framework paper
 │   │   ├── SNCM_Framework_EN.pdf
 │   │   └── SNCM_Framework_ES.pdf
@@ -232,13 +232,13 @@ neuro-coherence-framework/
 │       ├── conference_posters/
 │       └── slide_decks/
 │
-├── tests/                             # ✅ Testing Suite
+├── tests/                             # Testing Suite
 │   ├── test_operators.py
 │   ├── test_simulations.py
 │   ├── test_analysis.py
 │   └── test_integration.py
 │
-├── examples/                          # 🎓 Usage Examples
+├── examples/                          # Usage Examples
 │   ├── README.md
 │   ├── quickstart.py                 # 5-minute demo
 │   ├── full_analysis.py              # Complete workflow
@@ -257,7 +257,7 @@ neuro-coherence-framework/
 │   │
 │   └── PULL_REQUEST_TEMPLATE.md
 │
-└── scripts/                           # 🛠️ Automation Scripts
+└── scripts/                           # Automation Scripts
     ├── setup_environment.sh
     ├── run_all_simulations.sh
     ├── generate_figures.sh
@@ -474,7 +474,7 @@ From synthetic data (1000 timesteps, N=100 simulated subjects):
 
 ---
 
-## 🌟 Why This Matters
+## Why This Matters
 
 ### For Patients
 - Potential for **measurable, objective biomarkers** of bipolar stability
