@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this framework in your research, please cite it as below."
+type: software
+title: "Neuro-Coherence Framework for Bipolar I Disorder"
+abstract: >
+  A computational systems neuroscience framework modeling Bipolar I disorder
+  as a failure of adaptive oscillatory coherence across distributed neural,
+  metabolic, and endocrine networks. Includes a formal Neuro-Coherence Function (Ψ),
+  operationalized biomarkers, and computational simulations.
+authors:
+  - family-names: Feeney
+    given-names: Don Michael
+    name-suffix: Jr.
+    affiliation: Independent Researcher
+year: 2025
+version: 0.1.0
+license: MIT
+repository-code: https://github.com/dfeen87/neuro-coherence-framework
+url: https://github.com/dfeen87/neuro-coherence-framework
+keywords:
+  - computational neuroscience
+  - bipolar disorder
+  - network neuroscience
+  - psychiatric systems modeling
+  - neuro-coherence
+  - EEG
+  - fMRI
+  - computational psychiatry
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Feeney
+      given-names: Don Michael
+      name-suffix: Jr.
+  title: "Systemic Neuro-Coherence Modulation: A Computational Systems Framework for Bipolar I Disorder"
+  year: 2025
+  status: preprint
