@@ -1,84 +1,135 @@
-# Neuro-Coherence Framework for Bipolar I Disorder
+# Neuro‑Coherence Framework for Bipolar I Disorder
 ### A Computational Systems Neuroscience Approach to Affective Stability
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Documentation Status](https://img.shields.io/badge/docs-latest-brightgreen.svg)](docs/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](docs/)
+[![Research Status](https://img.shields.io/badge/status-private%20development-orange.svg)](#research-status)
 
 ---
 
 ## Overview
 
-The **Neuro-Coherence Framework** proposes a systems-level approach to understanding and potentially treating Bipolar I disorder by focusing on **network coherence dynamics** rather than isolated neurotransmitter imbalances.
+The **Neuro‑Coherence Framework** proposes that Bipolar I disorder is not simply a neurotransmitter imbalance, but a **systems‑level failure of adaptive oscillatory coherence** across neural, metabolic, and endocrine networks.
 
-### Core Hypothesis
+Rather than modeling mood episodes as isolated chemical fluctuations, this framework treats them as **emergent breakdowns in phase‑aligned information flow** across distributed brain systems.
 
-Bipolar I disorder represents a failure in **adaptive oscillatory coherence** across distributed neural, metabolic, and endocrine networks. Rather than viewing mood episodes as simple chemical imbalances, this framework models them as emergent properties of **impaired information synchronization** across brain systems.
+At the center of the model is the **Neuro‑Coherence Function (Ψ)** — a mathematical formulation that quantifies systemic harmony across space, time, and biophysical energy domains.
 
-### The Neuro-Coherence Function (Ψ)
+This repository contains a **research‑grade computational framework** for exploring that hypothesis through simulation, multimodal biomarkers, and falsifiable predictions.
 
-At the heart of this framework is a mathematical formulation that quantifies systemic harmony across space, time, and biophysical energy domains:
-
-```
-Ψ = Φ · ∫∫∫ [Θ(E) · Γ(t) · (1 - Δ_GR) · Λ(r,t)] dE dr dt
-```
-
-Where:
-- **Φ** (phi) — Global modulation coefficient
-- **Θ** (theta) — Thermodynamic stability operator (biochemical homeostasis)
-- **Γ** (gamma) — Adaptive gain function (neuroplastic responsiveness)
-- **Δ_GR** — Generalized regional differential (synchronization variance)
-- **Λ(r,t)** — Spatiotemporal coherence density (phase alignment across regions and time)
+> **This is not a clinical tool.**  
+> It is a theoretical and computational research framework.
 
 ---
 
-## Key Innovations
+## Conceptual Foundation  
+### From Chemical Suppression → Systemic Restoration
 
-### 1. **Falsifiable Systems Hypothesis**
-Unlike purely descriptive models, this framework proposes specific, testable predictions:
-- Bipolar I patients exhibit impaired **post-perturbation phase-locking recovery**
-- Network coherence (Ψ) can be quantified through multimodal biomarkers
-- Coherence restoration should precede symptomatic improvement
+Conventional treatments for Bipolar I disorder rely on broad neurochemical modulation. While effective for symptom stabilization, these approaches function primarily as **external regulators**, not internal restorers.
 
-### 2. **Operationalized Biomarkers**
-Each mathematical operator maps to measurable neurophysiological quantities:
-- **Γ (Adaptive Gain)**: EEG phase-locking value (PLV) recovery dynamics
-- **Θ (Thermodynamic Stability)**: Metabolic imaging (FDG-PET), biochemical assays
-- **Δ (Connectivity Variance)**: fMRI functional connectivity, graph theory metrics
-- **Λ (Spatiotemporal Coherence)**: Cross-frequency coupling, traveling wave patterns
+The Neuro‑Coherence Framework advances a different hypothesis:
 
-### 3. **Computational Validation**
-Provides working simulations demonstrating:
-- Non-linear interactions between operators
-- Emergence of bipolar-like oscillatory patterns
-- Predicted intervention effects on coherence dynamics
+> **Bipolar I disorder reflects a collapse in the brain’s ability to maintain coherent, phase‑aligned information flow across networks.**
+
+The goal is not lifelong suppression, but **restoration of intrinsic coherence** — enabling the system to stabilize itself.
+
+This reframes the central question:
+
+**Not:** “What chemical is imbalanced?”  
+**But:** “What physical law of coherence is failing in the Bipolar I brain?”
 
 ---
 
-## Quick Start
+## The Neuro‑Coherence Function (Ψ)
 
-```bash
-# Clone the repository
-git clone https://github.com/dfeen87/neuro-coherence-framework.git
-cd neuro-coherence-framework
+```
+Ψ = Φ · ∫∫∫ [ Θ(E) · Γ(t) · (1 − Δ_GR) · Λ(r,t) ] dE dr dt
+```
 
-# Create environment
-conda env create -f simulations/environment.yml
-conda activate neurocoherence
+| Symbol | Meaning | Interpretation |
+|------|--------|----------------|
+| **Φ** | Global modulation coefficient | System‑wide influence potential |
+| **Θ** | Thermodynamic stability operator | Biochemical homeostasis |
+| **Γ** | Adaptive gain function | Neuroplastic responsiveness |
+| **Δ_GR** | Generalized regional differential | Synchronization variance |
+| **Λ(r,t)** | Spatiotemporal coherence density | Phase alignment across regions & time |
 
-# Run basic demonstration
-python examples/quickstart.py
+**Interpretation:**  
+Ψ represents the system’s capacity to maintain **resilient, coherent information flow**.  
+When any operator destabilizes, the system enters **oscillatory divergence** — the computational signature of manic or depressive episodes.
 
-# Launch interactive notebook
-jupyter notebook simulations/notebooks/01_Introduction.ipynb
+---
+
+## Biomarker Mapping
+
+Each operator corresponds to measurable physiological quantities:
+
+| Operator | Domain | Proxy Metric | Measurement |
+|--------|--------|-------------|-------------|
+| **Γ** | Neuroplasticity | PLV recovery after perturbation | High‑density EEG |
+| **Θ** | Metabolic stability | Mitochondrial OCR, ATP production | Metabolomics, PET |
+| **Δ_GR** | Network variance | DMN–SN–CEN connectivity variance | fMRI |
+| **Λ(r,t)** | Phase coherence | Global phase‑lag index | EEG–fMRI fusion |
+
+This enables **multimodal computation of Ψ** from empirical data.
+
+---
+
+## Neuro‑Coherence Restoration Cycle (NCRC)
+
+A translational model describing how coherence could theoretically be restored:
+
+### Phase 1 — Stabilization (Scaffolding)
+- Suppression of incoherent oscillations  
+- Reduction of Δ_GR  
+- Acute increase in Λ  
+- Restoration of Θ  
+
+### Phase 2 — Resonant Integration
+- Endogenous coherence loops emerge  
+- Γ increases  
+- System learns phase‑aligned regulation  
+
+### Phase 3 — Adaptive Release
+- External modulation tapers  
+- Ψ remains elevated as influence approaches zero  
+- System achieves **Systemic Independence**
+
+> The NCRC is a **theoretical construct**, not a clinical protocol.
+
+---
+
+## Computational Modeling
+
+The repository includes:
+- neural mass models
+- perturbation simulations
+- recovery dynamics
+- multimodal fusion pipelines
+- validation and sensitivity analyses
+
+### Example
+
+```python
+from simulations.core import NeuroCoherence, Operators
+
+nc = NeuroCoherence()
+
+gamma = Operators.adaptive_gain(plasticity=0.8)
+theta = Operators.thermodynamic_stability(homeostasis=0.9)
+delta = Operators.connectivity_variance(sync_variance=0.3)
+lambda_op = Operators.spatiotemporal_coherence(phase_alignment=0.85)
+
+psi = nc.calculate(gamma, theta, delta, lambda_op)
+trajectory = nc.simulate_bipolar_episode(duration=1000, episode_type='manic')
 ```
 
 ---
 
 ## Repository Structure
-
 ```
+
 neuro-coherence-framework/
 │
 ├── README.md                          # You are here
@@ -266,428 +317,92 @@ neuro-coherence-framework/
 
 ---
 
-## Research Status
-
-### Current State: **Private Development & Validation**
-
-**Completed:**
-- ✅ Theoretical framework and mathematical formalization
-- ✅ Computational model architecture
-- ✅ Core operator definitions (Γ, Θ, Δ, Λ)
-- ✅ Initial simulation demonstrations
-
-**In Progress:**
-- 🔄 Comprehensive simulation validation
-- 🔄 Parameter sensitivity analysis
-- 🔄 Documentation completion
-- 🔄 Code testing and refinement
-
-**Planned (Before Public Release):**
-- 📋 Full reproducibility testing
-- 📋 Literature integration and validation
-- 📋 Expert peer review
-- 📋 Tutorial development
-
-### Development Approach
-
-This is **private, careful development** focused on:
-- Building solid foundations before public claims
-- Thorough validation of computational models
-- Ensuring scientific rigor and reproducibility
-- Getting expert feedback before broader release
-
-**Public release timeline:** When quality gates are met, not before.
-
-### What This Repository Contains
-
-**Currently Available:**
-- Theoretical framework documentation
-- Mathematical formulations
-- Computational model structure
-- Simulation architecture
-
-**What This Is:**
-- ✅ A testable scientific hypothesis
-- ✅ A computational modeling framework
-- ✅ An invitation for careful collaboration
-
-**What This Is NOT:**
-- ❌ Peer-reviewed research
-- ❌ Validated clinical science
-- ❌ Ready for clinical application
-- ❌ A finished product
-
----
-
 ## Key Predictions (Falsifiable)
 
-The framework succeeds if **all three** predictions hold:
+The framework succeeds only if **all three** predictions hold:
 
-1. **Prediction 1: Impaired Recovery Dynamics**
-   - Bipolar I patients show significantly slower phase-locking recovery after perturbation
-   - Measured via: EEG PLV during cognitive/emotional tasks
+1. **Impaired Recovery Dynamics**  
+   Bipolar I patients show slower PLV recovery after perturbation.
 
-2. **Prediction 2: Coherence-Symptom Correlation**
-   - Ψ scores inversely correlate with symptom severity
-   - Lower coherence predicts episode proximity
+2. **Coherence–Symptom Correlation**  
+   Ψ inversely correlates with symptom severity.
 
-3. **Prediction 3: Multi-Domain Integration**
-   - No single operator (Γ, Θ, Δ, Λ) alone predicts stability
-   - Multimodal integration required for accurate prediction
+3. **Multi‑Domain Integration**  
+   No single operator predicts stability alone.
 
-**The framework fails if:**
-- Bipolar I shows normal recovery dynamics
-- Ψ doesn't correlate with clinical state
-- Single-modality measures perform equally well
+The framework fails if any of these conditions are not met.
 
 ---
 
-## Collaboration Approach
+## Theoretical Therapeutic Model (Conceptual Only)
 
-### Current Phase: Selective Collaboration
+The framework introduces a **theoretical Gen‑4 Integrated Modulator (MIG4)** — a conceptual scaffold used to explore adaptive coherence restoration.
 
-During private development, we're working with:
-- **Trusted domain experts** for theoretical validation
-- **Computational neuroscientists** for model review
-- **Clinical researchers** for feasibility assessment
+- Not a drug
+- Not under development
+- Not a clinical recommendation
 
-### Future Collaboration
-
-Once core validation is complete, we'll open to:
-- Computational modeling contributions
-- Literature synthesis and review
-- Statistical validation methods
-- Documentation improvements
-
-### Why Selective Now?
-
-**Quality First:**
-- Need time to validate core assumptions
-- Want expert feedback before public claims
-- Avoiding premature hype or misinterpretation
-
-**Scientific Integrity:**
-- Build solid foundation first
-- Fix fundamental issues privately
-- Ensure reproducibility before sharing
-
-**Responsible Development:**
-- No pressure to oversell incomplete work
-- Time to get medical disclaimers right
-- Opportunity for thorough peer review
-
-### How to Express Interest
-
-If you're a researcher interested in this work:
-- Review the theoretical framework
-- Identify potential issues or improvements
-- Reach out through private channels
-- Understand this is early-stage development
-
-**We're not rushing. We're building carefully.**
+Its purpose is to test **computational predictions**, not propose treatment.
 
 ---
 
-## Documentation
+## Suggested Diagrams
 
-Full documentation available in [`docs/`](docs/):
-- [Theoretical Framework](docs/theoretical-framework/)
-- [Biomarker Protocols](docs/biomarkers/)
-- [Methodology](docs/methodology/)
-- [Literature Review](docs/literature/)
+- Operator interaction → Ψ  
+- Coherence collapse vs restoration  
+- Neuro‑Coherence Restoration Cycle  
+- Multimodal biomarker integration  
+- Simulation architecture  
 
----
-
-## Example Usage
-
-### Basic Simulation
-
-```python
-from simulations.core import NeuroCoherence, Operators
-
-# Initialize the neuro-coherence model
-nc = NeuroCoherence()
-
-# Define operators
-gamma = Operators.adaptive_gain(plasticity=0.8)
-theta = Operators.thermodynamic_stability(homeostasis=0.9)
-delta = Operators.connectivity_variance(sync_variance=0.3)
-lambda_op = Operators.spatiotemporal_coherence(phase_alignment=0.85)
-
-# Calculate Ψ
-psi = nc.calculate(gamma, theta, delta, lambda_op)
-
-# Simulate bipolar dynamics
-trajectory = nc.simulate_bipolar_episode(duration=1000, episode_type='manic')
-
-# Visualize
-nc.plot_coherence_trajectory(trajectory)
-```
-
-### Calculate Biomarkers from EEG Data
-
-```python
-from analysis.eeg import PhaseAnalysis
-from tools.biomarker_calculator import calculate_psi
-
-# Load EEG data
-eeg_data = load_eeg('path/to/data.edf')
-
-# Calculate phase-locking values
-plv = PhaseAnalysis.calculate_plv(eeg_data, freq_band='alpha')
-
-# Extract gamma (adaptive gain)
-gamma_score = calculate_gamma(plv, perturbation='cognitive_task')
-
-# Calculate full Ψ score
-psi_score = calculate_psi(
-    gamma=gamma_score,
-    theta=theta_from_metabolic_imaging,
-    delta=delta_from_fmri,
-    lambda_score=lambda_from_cross_frequency
-)
-
-print(f"Neuro-Coherence Score: {psi_score:.3f}")
-```
+(Diagrams live in `visualization/figures/`.)
 
 ---
 
-## Preliminary Results
+## Research Status
 
-### Computational Simulations
+**Current Phase:** Private Development & Validation
 
-From synthetic data (1000 timesteps, N=100 simulated subjects):
+Completed:
+- Theoretical framework
+- Mathematical formalization
+- Core operators
+- Initial simulations
 
-| Metric | Bipolar I Model | Healthy Control | Cohen's d |
-|--------|----------------|-----------------|-----------|
-| Mean Ψ | 0.42 ± 0.18 | 0.78 ± 0.12 | 2.34*** |
-| Γ (Adaptive Gain) | 0.51 ± 0.21 | 0.82 ± 0.09 | 1.92*** |
-| Δ (Variance) | 0.61 ± 0.15 | 0.28 ± 0.11 | 2.56*** |
-| Recovery Time | 347 ± 89 ms | 156 ± 34 ms | 2.81*** |
+In Progress:
+- Validation
+- Sensitivity analysis
+- Documentation refinement
 
-*\*\*\* p < 0.001, effect sizes indicate strong differentiation*
-
-### Model Predictions Visualization
-
-![Coherence Dynamics](visualization/figures/manuscript/coherence_dynamics_preview.png)
-*Predicted Ψ trajectories showing: (A) Healthy oscillations, (B) Bipolar instability, (C) Recovery dynamics*
+Public release occurs **only when quality gates are met**.
 
 ---
 
-## Why This Matters
+## Disclaimers
 
-### For Patients
-- Potential for **measurable, objective biomarkers** of bipolar stability
-- Framework for understanding bipolar disorder as a **systems-level phenomenon**
-- Foundation for future **personalized treatment approaches**
+- Not peer‑reviewed
+- Not clinically validated
+- Not medical advice
 
-### For Researchers
-- **Testable hypotheses** linking network dynamics to clinical phenomenology
-- **Computational tools** for modeling complex psychiatric disorders
-- **Integration framework** for multimodal neuroimaging data
-
-### For Clinicians
-- Potential for **early warning systems** based on coherence metrics
-- **Quantitative monitoring** of treatment response
-- **Personalized intervention timing** based on coherence trajectories
+Consult qualified professionals for clinical care.
 
 ---
 
-## License & Citation
-
-### License
-This project is released under the **MIT License** - see [LICENSE](LICENSE) file.
-
-### How to Cite
-
-If you use this framework in your research, please cite:
+## Citation
 
 ```bibtex
 @software{feeney2025neurocoherence,
   author = {Feeney, Don Michael Jr.},
-  title = {Neuro-Coherence Framework for Bipolar I Disorder: 
-           A Computational Systems Neuroscience Approach},
+  title = {Neuro‑Coherence Framework for Bipolar I Disorder},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/dfeen87/neuro-coherence-framework},
   note = {Theoretical framework with computational validation}
 }
 ```
 
-**Original Paper**: Feeney, D.M. Jr. (2025). "Systemic Neuro-Coherence Modulation: A Fourth-Generation Therapeutic Framework for Bipolar I Disorder." *Preprint*.
-
 ---
 
-## Related Resources
+## Closing
 
-### Primary Literature
-- Network neuroscience approaches to bipolar disorder ([PMC4142322](https://pmc.ncbi.nlm.nih.gov/articles/PMC4142322/))
-- Oscillatory dynamics in affective disorders ([PMC11685458](https://pmc.ncbi.nlm.nih.gov/articles/PMC11685458/))
-- Dynamic causal modeling in psychiatry ([PMC4956344](https://pmc.ncbi.nlm.nih.gov/articles/PMC4956344/))
+> *“Not to impose stability through suppression, but to teach the system to stabilize itself.”*
 
-### Complementary Frameworks
-- Brain criticality and phase transitions
-- Free energy principle in neuroscience
-- Network control theory
-- Computational psychiatry
-
-### Tools & Methods
-- [MNE-Python](https://mne.tools/) - EEG/MEG analysis
-- [Nilearn](https://nilearn.github.io/) - fMRI analysis
-- [NetworkX](https://networkx.org/) - Graph analysis
-- [Brian2](https://brian2.readthedocs.io/) - Spiking neural networks
-
----
-
-## Important Disclaimers
-
-### Research Status
-This framework is **theoretical and computational**. It has not been validated through:
-- Peer-reviewed publication
-- Prospective clinical trials
-- Regulatory approval processes
-- Independent replication
-
-### Not Medical Advice
-**This repository does not provide medical advice.** If you or someone you know is experiencing symptoms of bipolar disorder:
-- Consult qualified mental health professionals
-- Follow evidence-based treatment guidelines
-- Do not alter treatment based on this theoretical framework
-
-### Clinical Context
-Current evidence-based treatments for bipolar disorder include:
-- Mood stabilizers (lithium, valproate)
-- Atypical antipsychotics
-- Psychotherapy (CBT, DBT, IPSRT)
-- Lifestyle interventions
-
-This framework does not replace these approaches and is intended solely for research purposes.
-
----
-
-## Community & Contact
-
-### Discussion
-- **GitHub Discussions**: For research questions and collaboration
-- **Issues**: For bug reports and feature requests
-- **Pull Requests**: For code contributions
-
-### Author
-**Don Michael Feeney Jr.**  
-Independent Researcher | Systems Engineer  
-Specialization: AI Safety, Validation & Regulated Systems
-
-*Lived experience with bipolar disorder informing systems neuroscience research*
-
-### Collaborations
-
-**Current Status: Private Development**
-
-**Not currently seeking:**
-- Public contributions
-- Data sharing
-- Open collaboration
-
-**Timing:** Will open for broader collaboration once validation is complete and work meets quality standards.
-
----
-
-## Development Philosophy
-
-### Taking Time to Build It Right
-
-This repository follows a **private development, public release** model. Rather than rushing to publish incomplete work, we're taking the time to:
-
-**Current Focus: Foundation & Validation**
-- ✅ Theoretical framework documentation (complete)
-- ✅ Mathematical formalization (complete)
-- 🔄 Core computational implementations (in progress)
-- 🔄 Simulation validation (in progress)
-- 📋 Comprehensive documentation (planned)
-- 📋 Interactive tutorials and examples (planned)
-
-**Before Public Release:**
-- Complete parameter sensitivity analysis
-- Validate against existing bipolar disorder literature
-- Ensure reproducibility of all simulations
-- Create comprehensive tutorials
-- Review and refine all documentation
-- Establish clear limitations and scope
-
-**Quality Gates Before Going Public:**
-1. All core simulations must produce consistent, reproducible results
-2. Framework predictions must be clearly testable and falsifiable
-3. Documentation must be complete enough for independent replication
-4. Code must be well-tested and professionally structured
-5. Limitations must be transparently documented
-
-**Timeline:** When it's ready, not before.
-
-### Why Private Development?
-
-**Scientific Integrity**
-- Avoid premature claims or hype
-- Time to find and fix fundamental issues
-- Opportunity for thorough peer feedback before public claims
-
-**Quality Control**
-- Build comprehensive test suites
-- Validate computational models thoroughly
-- Ensure reproducibility across systems
-
-**Thoughtful Collaboration**
-- Work with trusted collaborators first
-- Get expert feedback on approach
-- Refine based on constructive criticism
-
-**Responsible Communication**
-- No pressure to oversell
-- Time to get the framing right
-- Ensure medical disclaimers are appropriate
-
-### Future Phases (Post-Release)
-
-Only after private validation is complete:
-- Peer review and publication consideration
-- Broader community engagement
-- Clinical collaboration exploration
-- Empirical validation planning
-
-**The goal is gold-standard work, not fast work.**
-
----
-
-## Acknowledgments
-
-This work was developed through:
-- Interdisciplinary synthesis of neuroscience, thermodynamics, and information theory
-- Iterative collaboration with generative AI platforms (Claude, ChatGPT)
-- Personal lived experience with bipolar disorder
-- Engagement with the computational psychiatry community
-
-**Special thanks to**:
-- The open-source neuroscience community
-- Researchers advancing network neuroscience
-- Advocates for transparent, reproducible science
-- Those living with and researching bipolar disorder
-
----
-
-## Project Status
-
-![GitHub last commit](https://img.shields.io/github/last-commit/dfeen87/neuro-coherence-framework)
-![GitHub issues](https://img.shields.io/github/issues/dfeen87/neuro-coherence-framework)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/dfeen87/neuro-coherence-framework)
-![GitHub stars](https://img.shields.io/github/stars/dfeen87/neuro-coherence-framework)
-
----
-
-<div align="center">
-
-### "Not to impose stability through suppression, but to teach the system to stabilize itself."
-
-**Open Science • Reproducible Research • Collaborative Discovery**
-
-[Documentation](docs/) • [Examples](examples/) • [Contributing](CONTRIBUTING.md) • [Cite](CITATION.cff)
-
-</div>
+**Open Science • Reproducible Research • Responsible Development**
