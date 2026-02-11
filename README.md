@@ -37,7 +37,7 @@ The goal is not lifelong suppression, but **restoration of intrinsic coherence**
 This reframes the central question:
 
 **Not:** “What chemical is imbalanced?”  
-**But:** “What physical law of coherence is failing in the Bipolar I brain?”
+**But:** “What physical law of coherence is failing in the Bipolar I brain's coherence?”
 
 ---
 
