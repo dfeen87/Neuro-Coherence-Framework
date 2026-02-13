@@ -258,7 +258,8 @@ neuro-coherence-framework/
 │   │   ├── 02-neuro-coherence-function.md
 │   │   └── 03-operators.md
 │   │   └── SNCM.md
-│   │
+│   │   └── LAYMANS_EXPLANATION.md
+│   │ 
 │   ├── summaries/                     # Analysis & summary documents
 │   │   ├── AI_PERSPECTIVE_ANALYSIS.md # AI analysis of framework
 │   │   ├── FINDINGS_SUMMARY.md        # Repository findings
