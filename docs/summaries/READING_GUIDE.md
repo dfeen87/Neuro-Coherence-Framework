@@ -82,13 +82,13 @@ Bipolar disorder = coherence breakdown, not just chemical imbalance
 
 **Visual Evidence:**
 Look at the generated PNG files:
-1. `quickstart_results.png` - Basic Ψ across states
-2. `longitudinal_analysis.png` - Temporal dynamics
-3. `parameter_sensitivity.png` - Operator impacts
-4. `multimodal_comparison.png` - EEG + fMRI integration
-5. `perturbation_experiment.png` - Recovery curves
-6. `recovery_comparison.png` - Healing dynamics
-7. `operator_correlations.png` - How operators relate to Ψ
+1. `docs/figures/quickstart_results.png` - Basic Ψ across states
+2. `docs/figures/longitudinal_analysis.png` - Temporal dynamics
+3. `docs/figures/parameter_sensitivity.png` - Operator impacts
+4. `docs/figures/multimodal_comparison.png` - EEG + fMRI integration
+5. `docs/figures/perturbation_experiment.png` - Recovery curves
+6. `docs/figures/recovery_comparison.png` - Healing dynamics
+7. `docs/figures/operator_correlations.png` - How operators relate to Ψ
 
 **Then Read:**
 - `FINDINGS_SUMMARY.md` to understand what you're seeing
@@ -216,7 +216,7 @@ Each PNG file corresponds to an example script. See `examples/README.md` for whi
 ### **Sequence A: Quick Understanding (30 minutes)**
 1. `FINDINGS_SUMMARY.md` (10 min)
 2. `README.md` - skim key sections (10 min)
-3. Look at `quickstart_results.png` (2 min)
+3. Look at `docs/figures/quickstart_results.png` (2 min)
 4. `AI_PERSPECTIVE_ANALYSIS.md` - Executive Summary (8 min)
 
 ### **Sequence B: Evaluation for Research (1 hour)**
@@ -282,7 +282,7 @@ Neuro-Coherence-Framework/
 ├── 📁 tests/                       ← Test suite
 ├── 📁 data/synthetic/              ← Data generators
 │
-└── 📊 *.png                        ← Generated results
+└── 📁 docs/figures/                ← Generated visualizations
     ├── quickstart_results.png
     ├── longitudinal_analysis.png
     └── ... (7 total)

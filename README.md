@@ -244,9 +244,6 @@ neuro-coherence-framework/
 ├── LICENSE                            # MIT License
 ├── CONTRIBUTING.md                    # Contribution guidelines
 ├── CITATION.cff                       # Citation format
-├── CI_SETUP_COMPLETE.md               # CI configuration notes
-├── IMPLEMENTATION_SUMMARY.md          # Implementation status
-├── WORKFLOW_SUMMARY.md                # Workflow documentation
 │
 ├── setup.py                           # Package setup
 ├── setup.cfg                          # Setup configuration
@@ -255,9 +252,27 @@ neuro-coherence-framework/
 │
 ├── docs/                              # Documentation
 │   ├── CI.md                          # CI/CD documentation
-│   └── theoretical-framework/         # Theory & mathematical foundations
-│       ├── 02-neuro-coherence-function.md
-│       └── 03-operators.md
+│   ├── CI_SETUP_COMPLETE.md           # CI configuration notes
+│   │
+│   ├── theoretical-framework/         # Theory & mathematical foundations
+│   │   ├── 02-neuro-coherence-function.md
+│   │   └── 03-operators.md
+│   │
+│   ├── summaries/                     # Analysis & summary documents
+│   │   ├── AI_PERSPECTIVE_ANALYSIS.md # AI analysis of framework
+│   │   ├── FINDINGS_SUMMARY.md        # Repository findings
+│   │   ├── IMPLEMENTATION_SUMMARY.md  # Implementation status
+│   │   ├── READING_GUIDE.md           # Guide to understanding the repo
+│   │   └── WORKFLOW_SUMMARY.md        # Workflow documentation
+│   │
+│   └── figures/                       # Generated visualizations
+│       ├── longitudinal_analysis.png
+│       ├── multimodal_comparison.png
+│       ├── operator_correlations.png
+│       ├── parameter_sensitivity.png
+│       ├── perturbation_experiment.png
+│       ├── quickstart_results.png
+│       └── recovery_comparison.png
 │
 ├── simulations/                       # Computational Models
 │   └── core/                          # Core implementations
@@ -301,18 +316,9 @@ neuro-coherence-framework/
 │   ├── full_analysis.py              # Complete workflow
 │   └── custom_simulation.py          # Customization guide
 │
-├── .github/                           # GitHub automation
-│   └── workflows/
-│       └── ci.yml                    # Continuous integration
-│
-└── *.png                              # Generated visualizations
-    ├── longitudinal_analysis.png
-    ├── multimodal_comparison.png
-    ├── operator_correlations.png
-    ├── parameter_sensitivity.png
-    ├── perturbation_experiment.png
-    ├── quickstart_results.png
-    └── recovery_comparison.png
+└── .github/                           # GitHub automation
+    └── workflows/
+        └── ci.yml                    # Continuous integration
 ```
 
 ---
@@ -354,7 +360,7 @@ Its purpose is to test **computational predictions**, not propose treatment.
 - Multimodal biomarker integration  
 - Simulation architecture  
 
-(Diagrams live in `visualization/figures/`.)
+(Generated diagrams are stored in `docs/figures/`.)
 
 ---
 

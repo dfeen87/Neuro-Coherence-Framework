@@ -293,10 +293,10 @@ Contributions should respect the modular structure:
 ```
 neuro-coherence-framework/
 ├── simulations/        # Core computational models
-├── analysis/          # Data analysis tools
-├── visualization/     # Plotting and visualization
-├── tools/            # Utilities and calculators
-├── docs/             # Documentation
+├── analysis/          # Data analysis tools (EEG, fMRI, integration)
+├── data/             # Data generation and resources
+├── docs/             # Documentation, summaries, and figures
+├── examples/         # Usage examples and demos
 └── tests/            # Test suite
 ```
 
