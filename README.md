@@ -5,6 +5,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](docs/)
 [![Research Status](https://img.shields.io/badge/status-private%20development-orange.svg)](#research-status)
+[![Tests](https://img.shields.io/badge/tests-46%20passing-brightgreen.svg)](#testing)
 
 ---
 
@@ -100,30 +101,136 @@ A translational model describing how coherence could theoretically be restored:
 
 ---
 
-## Computational Modeling
+## Installation
 
-The repository includes:
-- neural mass models
-- perturbation simulations
-- recovery dynamics
-- multimodal fusion pipelines
-- validation and sensitivity analyses
+### Prerequisites
 
-### Example
+- Python 3.8 or higher
+- pip package manager
+
+### Quick Install
+
+```bash
+# Clone repository
+git clone https://github.com/dfeen87/Neuro-Coherence-Framework.git
+cd Neuro-Coherence-Framework
+
+# Install package
+pip install -e .
+
+# Run quick start example
+python examples/quickstart.py
+```
+
+### Development Install
+
+```bash
+# Install with development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/
+```
+
+### Optional Dependencies
+
+For full functionality (EEG/fMRI analysis, interactive visualizations):
+
+```bash
+pip install -e ".[full]"
+```
+
+---
+
+## Quick Start
+
+### Basic Usage
 
 ```python
 from simulations.core import NeuroCoherence, Operators
 
+# Initialize calculator
 nc = NeuroCoherence()
 
+# Calculate operators
 gamma = Operators.adaptive_gain(plasticity=0.8)
 theta = Operators.thermodynamic_stability(homeostasis=0.9)
 delta = Operators.connectivity_variance(sync_variance=0.3)
 lambda_op = Operators.spatiotemporal_coherence(phase_alignment=0.85)
 
+# Compute Ψ
 psi = nc.calculate(gamma, theta, delta, lambda_op)
-trajectory = nc.simulate_bipolar_episode(duration=1000, episode_type='manic')
+print(f"Ψ = {psi.psi:.4f}")
+
+# Simulate bipolar episode
+trajectory = nc.simulate_bipolar_episode(
+    duration=1000,
+    episode_type='manic'
+)
 ```
+
+### Multimodal Analysis
+
+```python
+from analysis.integration import MultimodalPsiCalculator
+from data.synthetic.generate_data import generate_eeg_signals
+from analysis.eeg import calculate_plv_matrix
+
+# Generate synthetic EEG
+time, signals = generate_eeg_signals(state="euthymic")
+
+# Calculate PLV
+plv_matrix = calculate_plv_matrix(signals)
+
+# Calculate Ψ from multimodal data
+calc = MultimodalPsiCalculator()
+result = calc.calculate_psi_multimodal(
+    eeg_data={"plv_matrix": plv_matrix}
+)
+print(f"Multimodal Ψ = {result['psi']:.4f}")
+```
+
+### Examples
+
+See `examples/` directory for complete workflows:
+- `quickstart.py` - 5-minute introduction
+- `custom_simulation.py` - Advanced simulations
+- `full_analysis.py` - Multimodal integration
+
+---
+
+## Testing
+
+The framework includes comprehensive tests:
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run with coverage
+pytest tests/ --cov=simulations --cov=analysis
+
+# Run specific test file
+pytest tests/test_operators.py -v
+```
+
+**Current Status**: 46 tests passing
+- 27 operator tests
+- 19 simulation tests
+
+---
+
+## Computational Modeling
+
+The repository includes:
+- Core Ψ function implementation
+- Four mathematical operators (Γ, Θ, Δ, Λ)
+- Bipolar episode simulations
+- Perturbation and recovery models
+- Multimodal biomarker integration (EEG, fMRI)
+- Synthetic data generation
+- Visualization tools
+- Validation and sensitivity analyses
 
 ---
 
@@ -398,6 +505,12 @@ Consult qualified professionals for clinical care.
   note = {Theoretical framework with computational validation}
 }
 ```
+
+---
+
+## Acknowledgments
+
+This framework was developed with the assistance of **GitHub Copilot**, which significantly accelerated the implementation of the computational models, analysis modules, and testing infrastructure.
 
 ---
 
