@@ -244,158 +244,56 @@ neuro-coherence-framework/
 ├── LICENSE                            # MIT License
 ├── CONTRIBUTING.md                    # Contribution guidelines
 ├── CITATION.cff                       # Citation format
+├── CI_SETUP_COMPLETE.md               # CI configuration notes
+├── IMPLEMENTATION_SUMMARY.md          # Implementation status
+├── WORKFLOW_SUMMARY.md                # Workflow documentation
+│
+├── setup.py                           # Package setup
+├── setup.cfg                          # Setup configuration
+├── pyproject.toml                     # Modern Python project config
+├── requirements.txt                   # Core dependencies
 │
 ├── docs/                              # Documentation
-│   ├── index.md
-│   ├── theoretical-framework/         # Theory & mathematical foundations
-│   │   ├── 01-introduction.md
-│   │   ├── 02-neuro-coherence-function.md
-│   │   ├── 03-operators.md
-│   │   ├── 04-hypotheses.md
-│   │   └── 05-future-directions.md
-│   │
-│   ├── biomarkers/                    # Measurement protocols
-│   │   ├── gamma-adaptive-gain.md
-│   │   ├── theta-thermodynamic.md
-│   │   ├── delta-connectivity.md
-│   │   └── lambda-spatiotemporal.md
-│   │
-│   ├── methodology/                   # Experimental methods
-│   │   ├── eeg-protocols.md
-│   │   ├── fmri-protocols.md
-│   │   ├── computational-modeling.md
-│   │   └── validation-strategy.md
-│   │
-│   └── literature/                    # Research synthesis
-│       ├── network-neuroscience.md
-│       ├── bipolar-oscillations.md
-│       └── references.bib
+│   ├── CI.md                          # CI/CD documentation
+│   └── theoretical-framework/         # Theory & mathematical foundations
+│       ├── 02-neuro-coherence-function.md
+│       └── 03-operators.md
 │
 ├── simulations/                       # Computational Models
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── environment.yml
-│   │
-│   ├── core/                          # Core implementations
-│   │   ├── neuro_coherence.py        # Ψ function
-│   │   ├── operators.py              # Γ, Θ, Δ, Λ operators
-│   │   ├── network_dynamics.py       # Neural network models
-│   │   └── utils.py
-│   │
-│   ├── models/                        # Specific models
-│   │   ├── bipolar_network.py        # BD network model
-│   │   ├── healthy_baseline.py       # Control comparison
-│   │   ├── perturbation.py           # Perturbation scenarios
-│   │   └── recovery_dynamics.py      # Recovery modeling
-│   │
-│   ├── experiments/                   # Simulation experiments
-│   │   ├── 01_psi_function_demo.py
-│   │   ├── 02_operator_interactions.py
-│   │   ├── 03_bipolar_simulation.py
-│   │   ├── 04_recovery_curves.py
-│   │   └── 05_intervention_effects.py
-│   │
-│   ├── validation/                    # Model validation
-│   │   ├── parameter_sensitivity.py
-│   │   ├── model_comparison.py
-│   │   └── statistical_tests.py
-│   │
-│   └── notebooks/                     # Interactive tutorials
-│       ├── 01_Introduction.ipynb
-│       ├── 02_Psi_Function.ipynb
-│       ├── 03_Operators.ipynb
-│       ├── 04_BD_Dynamics.ipynb
-│       └── 05_Predictions.ipynb
+│   └── core/                          # Core implementations
+│       ├── __init__.py
+│       ├── neuro_coherence.py        # Ψ function
+│       ├── operators.py              # Γ, Θ, Δ, Λ operators
+│       └── utils.py                  # Utility functions
 │
 ├── analysis/                          # Data Analysis Tools
-│   ├── README.md
-│   ├── requirements.txt
+│   ├── __init__.py
 │   │
 │   ├── eeg/                           # EEG analysis
+│   │   ├── __init__.py
 │   │   ├── phase_locking.py          # PLV calculations
 │   │   ├── coherence_metrics.py
 │   │   ├── oscillatory_analysis.py
 │   │   └── preprocessing.py
 │   │
 │   ├── fmri/                          # fMRI analysis
+│   │   ├── __init__.py
 │   │   ├── connectivity.py
-│   │   ├── network_metrics.py
-│   │   └── roi_analysis.py
-│   │
-│   ├── metabolic/                     # Metabolic imaging
-│   │   ├── pet_analysis.py
-│   │   └── energy_dynamics.py
+│   │   └── network_metrics.py
 │   │
 │   └── integration/                   # Multimodal integration
-│       ├── multimodal_fusion.py
-│       └── psi_calculation.py        # Calculate Ψ from data
-│
-├── visualization/                     # Visualization Tools
-│   ├── README.md
-│   ├── requirements.txt
-│   │
-│   ├── plotting/                      # Static plots
-│   │   ├── timeseries.py
-│   │   ├── networks.py
-│   │   ├── coherence_maps.py
-│   │   └── phase_space.py
-│   │
-│   ├── interactive/                   # Interactive visualizations
-│   │   ├── dashboard.py              # Web dashboard
-│   │   └── 3d_brain.py
-│   │
-│   └── figures/                       # Generated figures
-│       ├── manuscript/
-│       └── presentations/
+│       ├── __init__.py
+│       └── multimodal_fusion.py      # Multimodal data fusion
 │
 ├── data/                              # Data Resources
 │   ├── README.md
-│   │
-│   ├── synthetic/                     # Generated datasets
-│   │   ├── generate_data.py
-│   │   ├── bipolar_trajectories.npz
-│   │   └── healthy_controls.npz
-│   │
-│   ├── literature/                    # Extracted values
-│   │   ├── extracted_values.csv
-│   │   └── meta_analysis.csv
-│   │
-│   └── templates/                     # Standard templates
-│       ├── eeg_montage.json
-│       └── brain_atlas.json
-│
-├── tools/                             # Utility Tools
-│   ├── README.md
-│   │
-│   ├── biomarker_calculator/          # Calculate biomarkers
-│   │   ├── gamma_score.py
-│   │   ├── theta_score.py
-│   │   ├── delta_score.py
-│   │   ├── lambda_score.py
-│   │   └── psi_score.py
-│   │
-│   └── validation_suite/              # Testing & validation
-│       ├── run_tests.py
-│       └── benchmark.py
-│
-├── papers/                            # Publications
-│   ├── original/                      # Original framework paper
-│   │   ├── SNCM_Framework_EN.pdf
-│   │   └── SNCM_Framework_ES.pdf
-│   │
-│   ├── manuscripts/                   # Working manuscripts
-│   │   ├── paper_01_framework/
-│   │   └── paper_02_biomarkers/
-│   │
-│   └── presentations/                 # Conference materials
-│       ├── conference_posters/
-│       └── slide_decks/
+│   └── synthetic/                     # Generated datasets
+│       └── generate_data.py          # Data generation scripts
 │
 ├── tests/                             # Testing Suite
-│   ├── test_operators.py
-│   ├── test_simulations.py
-│   ├── test_analysis.py
-│   └── test_integration.py
+│   ├── __init__.py
+│   ├── test_operators.py             # Operator tests
+│   └── test_simulations.py           # Simulation tests
 │
 ├── examples/                          # Usage Examples
 │   ├── README.md
@@ -404,23 +302,17 @@ neuro-coherence-framework/
 │   └── custom_simulation.py          # Customization guide
 │
 ├── .github/                           # GitHub automation
-│   ├── workflows/
-│   │   ├── tests.yml
-│   │   ├── docs.yml
-│   │   └── publish.yml
-│   │
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   │   └── research_question.md
-│   │
-│   └── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       └── ci.yml                    # Continuous integration
 │
-└── scripts/                           # Automation Scripts
-    ├── setup_environment.sh
-    ├── run_all_simulations.sh
-    ├── generate_figures.sh
-    └── build_documentation.sh
+└── *.png                              # Generated visualizations
+    ├── longitudinal_analysis.png
+    ├── multimodal_comparison.png
+    ├── operator_correlations.png
+    ├── parameter_sensitivity.png
+    ├── perturbation_experiment.png
+    ├── quickstart_results.png
+    └── recovery_comparison.png
 ```
 
 ---
