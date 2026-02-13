@@ -65,8 +65,8 @@ def run_perturbation_experiment():
     ax.grid(alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("perturbation_experiment.png", dpi=150)
-    print("Saved: perturbation_experiment.png\n")
+    plt.savefig("docs/figures/perturbation_experiment.png", dpi=150)
+    print("Saved: docs/figures/perturbation_experiment.png\n")
 
 
 def run_parameter_sensitivity():
@@ -139,8 +139,8 @@ def run_parameter_sensitivity():
         ax.legend()
 
     plt.tight_layout()
-    plt.savefig("parameter_sensitivity.png", dpi=150)
-    print("Saved: parameter_sensitivity.png\n")
+    plt.savefig("docs/figures/parameter_sensitivity.png", dpi=150)
+    print("Saved: docs/figures/parameter_sensitivity.png\n")
 
 
 def run_recovery_comparison():
@@ -181,8 +181,8 @@ def run_recovery_comparison():
     ax.grid(alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("recovery_comparison.png", dpi=150)
-    print("Saved: recovery_comparison.png\n")
+    plt.savefig("docs/figures/recovery_comparison.png", dpi=150)
+    print("Saved: docs/figures/recovery_comparison.png\n")
 
 
 def run_operator_correlation():
@@ -255,8 +255,8 @@ def run_operator_correlation():
         ax.grid(alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("operator_correlations.png", dpi=150)
-    print("Saved: operator_correlations.png\n")
+    plt.savefig("docs/figures/operator_correlations.png", dpi=150)
+    print("Saved: docs/figures/operator_correlations.png\n")
 
 
 def main():
@@ -276,10 +276,10 @@ def main():
     print("=" * 60)
     print()
     print("Generated files:")
-    print("  - perturbation_experiment.png")
-    print("  - parameter_sensitivity.png")
-    print("  - recovery_comparison.png")
-    print("  - operator_correlations.png")
+    print("  - docs/figures/perturbation_experiment.png")
+    print("  - docs/figures/parameter_sensitivity.png")
+    print("  - docs/figures/recovery_comparison.png")
+    print("  - docs/figures/operator_correlations.png")
     print()
 
 

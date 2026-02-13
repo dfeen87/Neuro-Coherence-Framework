@@ -106,7 +106,7 @@ Depressive Ψ (mean): 0.1815
 - Episode highlighting
 
 **Generated Figures** (7 total):
-1. `quickstart_results.png` - 4-panel overview
+1. `docs/figures/quickstart_results.png` - 4-panel overview
 2. `perturbation_experiment.png` - Multiple perturbations
 3. `parameter_sensitivity.png` - 4-parameter analysis
 4. `recovery_comparison.png` - Recovery rates

@@ -163,7 +163,7 @@ def main():
     plt.tight_layout()
 
     # Save figure
-    output_file = "quickstart_results.png"
+    output_file = "docs/figures/quickstart_results.png"
     plt.savefig(output_file, dpi=150, bbox_inches="tight")
     print(f"   Figure saved to: {output_file}")
     print()

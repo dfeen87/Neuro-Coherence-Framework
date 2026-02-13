@@ -176,8 +176,8 @@ def compare_healthy_vs_bipolar():
     ax.grid(axis="y", alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("multimodal_comparison.png", dpi=150)
-    print("\nSaved: multimodal_comparison.png")
+    plt.savefig("docs/figures/multimodal_comparison.png", dpi=150)
+    print("\nSaved: docs/figures/multimodal_comparison.png")
 
     return results
 
@@ -259,8 +259,8 @@ def longitudinal_analysis():
     ax.grid(alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("longitudinal_analysis.png", dpi=150)
-    print("Saved: longitudinal_analysis.png")
+    plt.savefig("docs/figures/longitudinal_analysis.png", dpi=150)
+    print("Saved: docs/figures/longitudinal_analysis.png")
 
 
 def main():
@@ -291,8 +291,8 @@ def main():
     print("Analysis Complete!")
     print("=" * 60)
     print("\nGenerated files:")
-    print("  - multimodal_comparison.png")
-    print("  - longitudinal_analysis.png")
+    print("  - docs/figures/multimodal_comparison.png")
+    print("  - docs/figures/longitudinal_analysis.png")
     print()
 
 
