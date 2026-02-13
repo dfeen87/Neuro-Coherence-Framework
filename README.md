@@ -1,6 +1,7 @@
 # Neuro‑Coherence Framework for Bipolar I Disorder
 ### A Computational Systems Neuroscience Approach to Affective Stability
 
+[![CI](https://github.com/dfeen87/Neuro-Coherence-Framework/actions/workflows/ci.yml/badge.svg)](https://github.com/dfeen87/Neuro-Coherence-Framework/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](docs/)
