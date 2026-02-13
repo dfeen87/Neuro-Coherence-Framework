@@ -508,6 +508,12 @@ Consult qualified professionals for clinical care.
 
 ---
 
+## Acknowledgments
+
+This framework was developed with the assistance of **GitHub Copilot**, which significantly accelerated the implementation of the computational models, analysis modules, and testing infrastructure.
+
+---
+
 ## Closing
 
 > *“Not to impose stability through suppression, but to teach the system to stabilize itself.”*
