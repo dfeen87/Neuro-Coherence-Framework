@@ -257,6 +257,7 @@ neuro-coherence-framework/
 │   ├── theoretical-framework/         # Theory & mathematical foundations
 │   │   ├── 02-neuro-coherence-function.md
 │   │   └── 03-operators.md
+│   │   └── SNCM.md
 │   │
 │   ├── summaries/                     # Analysis & summary documents
 │   │   ├── AI_PERSPECTIVE_ANALYSIS.md # AI analysis of framework
