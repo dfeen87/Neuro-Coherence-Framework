@@ -411,7 +411,7 @@ Consult qualified professionals for clinical care.
 
 ## Acknowledgments
 
-This framework was developed with the assistance of **GitHub Copilot**, which significantly accelerated the implementation of the computational models, analysis modules, and testing infrastructure.
+I would like to acknowledge **Microsoft Copilot**, **Anthropic Claude**, **Google Jules**, and **OpenAI ChatGPT** for their meaningful assistance in refining concepts, improving clarity, and strengthening the overall quality of this code.
 
 ---
 
