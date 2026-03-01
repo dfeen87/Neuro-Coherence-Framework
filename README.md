@@ -411,7 +411,7 @@ Consult qualified professionals for clinical care.
 
 ## Acknowledgments
 
-I would like to acknowledge **Microsoft Copilot**, **Anthropic Claude**, **Google Jules**, and **OpenAI ChatGPT** for their meaningful assistance in refining concepts, improving clarity, and strengthening the overall quality of this code.
+I would like to acknowledge **Microsoft Copilot**, **Anthropic Claude**, for their meaningful assistance in refining concepts, improving clarity, and strengthening the overall quality of this code.
 
 ---
 
