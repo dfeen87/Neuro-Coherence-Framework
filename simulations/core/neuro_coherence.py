@@ -5,7 +5,7 @@ This module implements the central mathematical framework:
     Ψ = Φ · ∫∫∫ [ Θ(E) · Γ(t) · (1 − Δ_GR) · Λ(r,t) ] dE dr dt
 """
 
-from typing import Union, Optional, Tuple, Dict, Any
+from typing import Union, Optional, Dict, Any
 import numpy as np
 from dataclasses import dataclass
 from scipy import integrate

@@ -81,8 +81,6 @@ class MultimodalPsiCalculator:
         # Network-specific metrics if labels provided
         network_metrics = None
         if network_labels is not None:
-            from ..fmri.connectivity import calculate_network_connectivity
-
             # Dummy timeseries for network calculation
             # In real use, this would use actual timeseries
             within_conn, between_conn = self._calculate_network_stats(

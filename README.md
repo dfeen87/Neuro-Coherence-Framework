@@ -20,7 +20,7 @@ At the center of the model is the **Neuro‑Coherence Function (Ψ)** — a math
 
 This repository contains a **research‑grade computational framework** for exploring that hypothesis through simulation, multimodal biomarkers, and falsifiable predictions.
 
-> **This is not a clinical tool.**  
+> **Note: This is not a clinical tool.**
 > It is a theoretical and computational research framework.
 
 ---
@@ -409,9 +409,9 @@ Consult qualified professionals for clinical care.
 
 ---
 
-## Acknowledgments
+## License
 
-I would like to acknowledge **Microsoft Copilot**, **Anthropic Claude**, for their meaningful assistance in refining concepts, improving clarity, and strengthening the overall quality of this code.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

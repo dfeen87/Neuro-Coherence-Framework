@@ -1,6 +1,6 @@
 """EEG analysis module - Phase Locking Value (PLV) calculations."""
 
-from typing import Optional, Tuple
+from typing import Optional
 import numpy as np
 from scipy.signal import hilbert, butter, filtfilt
 
