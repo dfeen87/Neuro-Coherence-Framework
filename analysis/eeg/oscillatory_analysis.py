@@ -1,8 +1,8 @@
 """EEG oscillatory analysis."""
 
-from typing import Tuple, Optional
+from typing import Tuple
 import numpy as np
-from scipy.signal import hilbert, butter, filtfilt
+from scipy.signal import hilbert
 
 
 def calculate_instantaneous_frequency(signal: np.ndarray, fs: float) -> np.ndarray:

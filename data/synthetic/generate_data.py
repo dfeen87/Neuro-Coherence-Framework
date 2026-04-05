@@ -1,6 +1,6 @@
 """Synthetic data generation for Neuro-Coherence Framework."""
 
-from typing import Tuple, Optional
+from typing import Tuple
 import numpy as np
 
 

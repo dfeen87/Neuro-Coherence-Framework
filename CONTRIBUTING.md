@@ -1,7 +1,5 @@
 # Contributing to Neuro-Coherence Framework
 
-Thank you for your interest in the Neuro-Coherence Framework!
-
 ## Current Development Status
 
 **This project is currently in private development and validation.**
