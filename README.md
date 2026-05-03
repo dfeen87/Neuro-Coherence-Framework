@@ -5,7 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](docs/)
-[![Research Status](https://img.shields.io/badge/status-private%20development-orange.svg)](#research-status)
 [![Tests](https://img.shields.io/badge/tests-46%20passing-brightgreen.svg)](#testing)
 
 ---
