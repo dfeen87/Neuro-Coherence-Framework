@@ -102,6 +102,32 @@ A translational model describing how coherence could theoretically be restored:
 
 ---
 
+### Target Identification & Sensitivity Analysis
+
+The **v1.2.0** update introduces the `analysis/sensitivity.py` module, transitioning the framework from a theoretical model to a functional **Target Identification** tool for drug development and clinical research.
+
+#### The Sensitivity Gradient (∇Ψ)
+
+To move beyond chemical suppression toward **Systemic Restoration**, we must identify which biological operators provide the most leverage for stabilization. The framework now calculates the partial derivatives of the Neuro-Coherence Function:
+
+**∂Ψ/∂Γ, ∂Ψ/∂Θ, ∂Ψ/∂Δ, ∂Ψ/∂Λ**
+
+This allows researchers to quantify exactly how a change in **Thermodynamic Stability (Θ)** or **Adaptive Gain (Γ)** impacts the global coherence of the system. By mapping the magnitude of the gradient **||∇Ψ||**, we can pinpoint the "Leverage Points" of the architecture.
+
+#### Key Capabilities
+
+* **Global Parameter Sweeps**: Execute Grid or Monte Carlo sampling to map the "Topography of Stability."
+* **Tipping Point Mapping**: Automatically detect the "Cliff’s Edge"—the specific parameter coordinates where **Ψ ≈ 0** and the system enters oscillatory divergence (Manic/Depressive onset).
+* **Therapeutic Leverage Points**: Identify regions where the sensitivity magnitude is maximized, indicating the most effective targets for metabolic or neuroplastic intervention.
+
+
+
+#### Practical Application: Metabolic vs. Plasticity Targets
+
+If the sensitivity heatmap shows high density along the **Θ axis**, it mathematically suggests that **metabolic/mitochondrial restoration** is the priority for that specific systemic profile. Conversely, if **Γ** is the primary driver of variance, **neuroplastic-restorative** agents take precedence.
+
+---
+
 ## Installation
 
 ### Prerequisites
