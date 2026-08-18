@@ -251,6 +251,34 @@ print(f"Concurrent EEG-fMRI Ψ = {eeg_fmri_result['psi']:.4f}")
 print(f"Regime: {eeg_fmri_result['bipolar_regime']['regime']}")
 ```
 
+### Global Sensitivity Analysis (v1.2.0)
+
+```python
+from analysis.sensitivity import (
+    perform_parameter_sweep,
+    identify_tipping_points,
+    generate_sensitivity_heatmap,
+)
+
+# Run GSA parameter sweep across operators
+theta_vals, gamma_vals, psi_grid, d_theta, d_gamma, d_delta, d_lambda = (
+    perform_parameter_sweep(resolution=20, n_mc_samples=50)
+)
+
+# Identify tipping points where Psi approaches 0
+tipping_points = identify_tipping_points(psi_grid, threshold=0.05)
+
+# Generate sensitivity heatmap visualization
+sensitivity_grid = (d_theta**2 + d_gamma**2 + d_delta**2 + d_lambda**2) ** 0.5
+generate_sensitivity_heatmap(
+    theta_vals=theta_vals,
+    gamma_vals=gamma_vals,
+    sensitivity_grid=sensitivity_grid,
+    tipping_points=tipping_points,
+    output_path="docs/figures/sensitivity_heatmap.png",
+)
+```
+
 ### Examples
 
 See `examples/` directory for complete workflows:
@@ -330,13 +358,15 @@ neuro-coherence-framework/
 │   │   └── WORKFLOW_SUMMARY.md        # Workflow documentation
 │   │
 │   └── figures/                       # Generated visualizations
+│       ├── eeg_fmri_integration.png
 │       ├── longitudinal_analysis.png
 │       ├── multimodal_comparison.png
 │       ├── operator_correlations.png
 │       ├── parameter_sensitivity.png
 │       ├── perturbation_experiment.png
 │       ├── quickstart_results.png
-│       └── recovery_comparison.png
+│       ├── recovery_comparison.png
+│       └── sensitivity_heatmap.png
 │
 ├── simulations/                       # Computational Models
 │   └── core/                          # Core implementations
@@ -366,9 +396,11 @@ neuro-coherence-framework/
 │   │   ├── preprocessing.py          # AAS & OBS/PCA GA/BCG artifact removal
 │   │   └── synchronization.py        # Spatiotemporal Lambda, Delta_GR, & regime classification
 │   │
-│   └── integration/                   # Multimodal integration
-│       ├── __init__.py
-│       └── multimodal_fusion.py      # Multimodal data fusion
+│   ├── integration/                   # Multimodal integration
+│   │   ├── __init__.py
+│   │   └── multimodal_fusion.py      # Multimodal data fusion
+│   │
+│   └── sensitivity.py                 # Global sensitivity analysis (v1.2.0)
 │
 ├── data/                              # Data Resources
 │   ├── README.md
