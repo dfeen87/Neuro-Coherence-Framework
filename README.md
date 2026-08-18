@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](docs/)
-[![Tests](https://img.shields.io/badge/tests-46%20passing-brightgreen.svg)](#testing)
+[![Tests](https://img.shields.io/badge/tests-65%20passing-brightgreen.svg)](#testing)
 
 ---
 
@@ -98,6 +98,33 @@ A translational model describing how coherence could theoretically be restored:
 - System achieves **Systemic Independence**
 
 > The NCRC is a **theoretical construct**, not a clinical protocol.
+
+---
+
+### Concurrent EEG–fMRI Integration & Clinical Stratification (v2.0.0)
+
+The **v2.0.0** release establishes concurrent EEG–fMRI (simultaneous EEG–fMRI) processing as a first-class integration unit within the Neuro-Coherence Framework. Located in `analysis/eeg_fmri/` and orchestrated via `ConcurrentEEGFMRIProcessor`, this architecture aligns high-temporal-resolution EEG phase dynamics with spatial BOLD network connectivity to quantify systemic coherence ($\Psi$) in bipolar disorder workflows.
+
+#### Core Capabilities
+
+1. **EEG-in-MRI Preprocessing & Artifact Correction (`analysis/eeg_fmri/preprocessing.py`)**:
+   - **Gradient Artifact (GA) Removal**: Average Artifact Subtraction (AAS) with volume trigger alignment, augmented with Optimal Basis Sets (OBS/PCA) for residual pulse suppression.
+   - **Ballistocardiogram (BCG) Removal**: ECG R-peak alignment paired with OBS/PCA cardiac artifact decomposition.
+   - **Motion & Scanner Noise Filtering**: Bandpass filtering, z-score motion detection, and signal despeckling.
+   - **Quantitative Benchmark Metrics**: Calculates Artifact Reduction Ratio (ARR in dB), Signal-to-Artifact Ratio improvement ($\Delta\text{SAR}$ in dB), and ground-truth correlation.
+
+2. **Cross-Modal Spatiotemporal Synchronization (`analysis/eeg_fmri/synchronization.py`)**:
+   - **Temporal Alignment**: HRF convolution of band-limited EEG envelope and downsampling to fMRI TR resolution.
+   - **Joint Coherence ($\Lambda$)**: Combines sliding-window Phase Locking Value (PLV), EEG envelope ↔ BOLD cross-correlation, and Canonical Correlation Analysis / singular correlation (CCA).
+   - **Network Connectivity Instability ($\Delta_{GR}$)**: Measures sliding-window functional connectivity variance across fronto-limbic and triple-network nodes (DMN, Salience, CEN).
+
+3. **Bipolar Disorder Regime Stratification**:
+   - **Euthymic**: High joint coherence ($\Lambda \ge 0.50$) and stable network regulation ($\Delta_{GR} \le 0.35$).
+   - **Manic**: Elevated network connectivity variance ($\Delta_{GR} \ge 0.40$) driven by phase instability and cross-network dysregulation.
+   - **Depressive**: Low joint coherence ($\Lambda \le 0.35$) and hypo-connected network regulation ($\Delta_{GR} \le 0.35$).
+
+4. **Synthetic Concurrent Dataset Generation (`data/synthetic/generate_data.py`)**:
+   - `generate_concurrent_eeg_fmri_data()` simulates uncorrupted/corrupted concurrent EEG and BOLD signals with controllable bipolar coupling and realistic scanner artifacts for benchmarking.
 
 ---
 
@@ -214,6 +241,14 @@ result = calc.calculate_psi_multimodal(
     eeg_data={"plv_matrix": plv_matrix}
 )
 print(f"Multimodal Ψ = {result['psi']:.4f}")
+
+# Concurrent EEG-fMRI Analysis (v2.0.0)
+from data.synthetic.generate_data import generate_concurrent_eeg_fmri_data
+
+concurrent_data = generate_concurrent_eeg_fmri_data(state="euthymic")
+eeg_fmri_result = calc.calculate_from_concurrent_eeg_fmri(concurrent_data)
+print(f"Concurrent EEG-fMRI Ψ = {eeg_fmri_result['psi']:.4f}")
+print(f"Regime: {eeg_fmri_result['bipolar_regime']['regime']}")
 ```
 
 ### Examples
@@ -222,6 +257,7 @@ See `examples/` directory for complete workflows:
 - `quickstart.py` - 5-minute introduction
 - `custom_simulation.py` - Advanced simulations
 - `full_analysis.py` - Multimodal integration
+- `eeg_fmri_analysis.py` - Concurrent EEG-fMRI preprocessing, synchronization, and regime stratification
 
 ---
 
@@ -240,9 +276,10 @@ pytest tests/ --cov=simulations --cov=analysis
 pytest tests/test_operators.py -v
 ```
 
-**Current Status**: 46 tests passing
+**Current Status**: 65 tests passing
 - 27 operator tests
 - 19 simulation tests
+- 19 concurrent EEG-fMRI & multimodal integration tests
 
 ---
 
@@ -323,6 +360,12 @@ neuro-coherence-framework/
 │   │   ├── connectivity.py
 │   │   └── network_metrics.py
 │   │
+│   ├── eeg_fmri/                      # Concurrent EEG-fMRI integration (v2.0.0)
+│   │   ├── __init__.py
+│   │   ├── processor.py              # ConcurrentEEGFMRIProcessor
+│   │   ├── preprocessing.py          # AAS & OBS/PCA GA/BCG artifact removal
+│   │   └── synchronization.py        # Spatiotemporal Lambda, Delta_GR, & regime classification
+│   │
 │   └── integration/                   # Multimodal integration
 │       ├── __init__.py
 │       └── multimodal_fusion.py      # Multimodal data fusion
@@ -335,13 +378,15 @@ neuro-coherence-framework/
 ├── tests/                             # Testing Suite
 │   ├── __init__.py
 │   ├── test_operators.py             # Operator tests
-│   └── test_simulations.py           # Simulation tests
+│   ├── test_simulations.py           # Simulation tests
+│   └── test_eeg_fmri.py              # Concurrent EEG-fMRI tests
 │
 ├── examples/                          # Usage Examples
 │   ├── README.md
 │   ├── quickstart.py                 # 5-minute demo
 │   ├── full_analysis.py              # Complete workflow
-│   └── custom_simulation.py          # Customization guide
+│   ├── custom_simulation.py          # Customization guide
+│   └── eeg_fmri_analysis.py          # Concurrent EEG-fMRI workflow
 │
 └── .github/                           # GitHub automation
     └── workflows/
