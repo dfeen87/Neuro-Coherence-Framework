@@ -388,14 +388,14 @@ def generate_concurrent_eeg_fmri_data(
 
         # Add ROI-specific variance and state-dependent temporal instability
         if state == "manic":
-            cross_mod = 1.5 * np.sin(2.0 * np.pi * 0.03 * time_fmri + roi_idx * np.pi / 3.0)
+            cross_mod = 1.5 * np.sin(
+                2.0 * np.pi * 0.03 * time_fmri + roi_idx * np.pi / 3.0
+            )
             fmri_clean[roi_idx] = (
                 bold_signal + cross_mod * bold_signal + 0.02 * rng.randn(n_tr)
             )
         elif state == "depressive":
-            fmri_clean[roi_idx] = (
-                0.3 * bold_signal + 0.02 * rng.randn(n_tr)
-            )
+            fmri_clean[roi_idx] = 0.3 * bold_signal + 0.02 * rng.randn(n_tr)
         else:  # euthymic
             fmri_clean[roi_idx] = bold_signal + 0.05 * rng.randn(n_tr)
 
@@ -417,20 +417,26 @@ def generate_concurrent_eeg_fmri_data(
             carrier_alpha = np.sin(2 * np.pi * alpha_freq * time_eeg + p_noise)
             carrier_theta = np.sin(2 * np.pi * theta_freq * time_eeg + p_noise)
             indep_signal = carrier_alpha + 0.5 * carrier_theta
-            ch_signal = 0.85 * common_signal + 0.15 * indep_signal
+            ch_signal = (
+                eeg_coherence * common_signal + (1.0 - eeg_coherence) * indep_signal
+            )
         elif state == "manic":
             p_noise = 0.4 * np.sin(2 * np.pi * 0.1 * time_eeg + ch)
             carrier_alpha = np.sin(2 * np.pi * alpha_freq * time_eeg + p_noise)
             carrier_theta = np.sin(2 * np.pi * theta_freq * time_eeg + p_noise)
             indep_signal = carrier_alpha + 0.5 * carrier_theta
             envelope = 1.0 + coupling_strength * modulating_driver
-            ch_signal = 0.50 * common_signal + 0.50 * (indep_signal * envelope)
+            ch_signal = eeg_coherence * common_signal + (1.0 - eeg_coherence) * (
+                indep_signal * envelope
+            )
         else:  # depressive
             p_noise = rng.uniform(-np.pi, np.pi, n_eeg_samples)
             carrier_alpha = np.sin(2 * np.pi * alpha_freq * time_eeg + p_noise)
             carrier_theta = np.sin(2 * np.pi * theta_freq * time_eeg + p_noise)
             indep_signal = carrier_alpha + 0.5 * carrier_theta
-            ch_signal = 0.10 * common_signal + 0.90 * indep_signal
+            ch_signal = (
+                eeg_coherence * common_signal + (1.0 - eeg_coherence) * indep_signal
+            )
 
         eeg_clean[ch] = ch_signal + 0.02 * rng.randn(n_eeg_samples)
 

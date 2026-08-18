@@ -12,7 +12,6 @@ joint spatiotemporal coherence (Lambda), and bipolar disorder regime stratificat
 from typing import Dict, Tuple, Any
 import numpy as np
 from scipy.signal import butter, filtfilt, hilbert
-from sklearn.cross_decomposition import CCA
 
 
 def _canonical_hrf(
@@ -192,7 +191,11 @@ def compute_cca_coherence(
     dy = Y.shape[1]
 
     if n_samples < 2 or dx < 1 or dy < 1:
-        return {"canonical_correlations": np.array([0.0]), "mean_cca": 0.0, "max_cca": 0.0}
+        return {
+            "canonical_correlations": np.array([0.0]),
+            "mean_cca": 0.0,
+            "max_cca": 0.0,
+        }
 
     X_centered = X - np.mean(X, axis=0)
     Y_centered = Y - np.mean(Y, axis=0)
@@ -271,7 +274,9 @@ def compute_network_variance(
     return {
         "delta_gr": delta_gr,
         "mean_connectivity": float(np.mean(conn_stack)),
-        "connectivity_variance": float(np.mean(np.var(conn_stack[:, triu_idx[0], triu_idx[1]], axis=0))),
+        "connectivity_variance": float(
+            np.mean(np.var(conn_stack[:, triu_idx[0], triu_idx[1]], axis=0))
+        ),
         "edge_stds": edge_stds,
     }
 
