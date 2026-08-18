@@ -3,6 +3,7 @@
 from typing import Dict, Optional, Any
 import numpy as np
 from simulations.core import NeuroCoherence, Operators
+from analysis.eeg_fmri.processor import ConcurrentEEGFMRIProcessor
 
 
 class MultimodalPsiCalculator:
@@ -215,4 +216,55 @@ class MultimodalPsiCalculator:
             "theta": theta,
             "delta": delta,
             "lambda": lambda_op,
+        }
+
+    def calculate_from_concurrent_eeg_fmri(
+        self,
+        concurrent_data: Dict[str, Any],
+        metabolic_data: Optional[Dict[str, Any]] = None,
+        default_plasticity: float = 0.8,
+        default_homeostasis: float = 0.9,
+    ) -> Dict[str, Any]:
+        """
+        Calculate Ψ from concurrent EEG-fMRI dataset.
+
+        Args:
+            concurrent_data: Dictionary containing concurrent EEG-fMRI signals and metadata.
+            metabolic_data: Optional metabolic data for Theta calculation.
+            default_plasticity: Plasticity parameter for Gamma calculation.
+            default_homeostasis: Homeostasis parameter for Theta calculation.
+
+        Returns:
+            Dictionary with Psi, operator objects, artifact metrics, and bipolar regime.
+        """
+        processor = ConcurrentEEGFMRIProcessor(phi=self.nc.phi)
+        proc_results = processor.process_dataset(concurrent_data)
+
+        lambda_val = proc_results["synchronization"]["lambda"]
+        delta_gr_val = proc_results["synchronization"]["delta_gr"]
+
+        gamma = Operators.adaptive_gain(
+            plasticity=default_plasticity, responsiveness=lambda_val
+        )
+
+        if metabolic_data is not None:
+            metabolic_res = self.calculate_from_metabolic(**metabolic_data)
+            theta = metabolic_res["theta"]
+        else:
+            theta = Operators.thermodynamic_stability(homeostasis=default_homeostasis)
+
+        delta = Operators.connectivity_variance(sync_variance=delta_gr_val)
+        lambda_op = Operators.spatiotemporal_coherence(phase_alignment=lambda_val)
+
+        psi_result = self.nc.calculate(gamma, theta, delta, lambda_op)
+
+        return {
+            "psi": float(psi_result.psi),
+            "psi_result": psi_result,
+            "gamma": gamma,
+            "theta": theta,
+            "delta": delta,
+            "lambda": lambda_op,
+            "concurrent_results": proc_results,
+            "bipolar_regime": proc_results["synchronization"]["regime_details"],
         }
